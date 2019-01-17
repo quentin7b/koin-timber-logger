@@ -8,12 +8,19 @@ import timber.log.Timber
  * @param showDebug Boolean specifies if we should log showDebug messages, default is true
  * @param showErr Boolean specifies if we should log error messages, default is true
  * @param showInfo Boolean specifies if we should log showInfo messages, default is true
+ * @param tag String nullable specifies the tag to use with Timber for the logs, if null, no tag is set
  */
 class TimberLogger(
     private val showDebug: Boolean = true,
     private val showErr: Boolean = true,
-    private val showInfo: Boolean = true
+    private val showInfo: Boolean = true,
+    tag: String? = null
 ) : Logger {
+
+    /**
+     * Tree used to print the messages, initialized by the construction
+     */
+    private val tree: Timber.Tree = if (tag === null) Timber.asTree() else Timber.tag(tag)
 
     /**
      * Deprecated
@@ -35,19 +42,19 @@ class TimberLogger(
 
     override fun debug(msg: String) {
         if (showDebug) {
-            Timber.d(msg)
+            tree.d(msg)
         }
     }
 
     override fun err(msg: String) {
         if (showErr) {
-            Timber.e(msg)
+            tree.e(msg)
         }
     }
 
     override fun info(msg: String) {
         if (showInfo) {
-            Timber.i(msg)
+            tree.i(msg)
         }
     }
 }
