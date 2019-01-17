@@ -17,7 +17,11 @@ class ExampleApp : Application() {
                     single { HelloImplementation() as HelloService }
                 }
             ),
-            logger = TimberLogger()
+            logger = TimberLogger(
+                showDebug = false,
+                showInfo = true,
+                tag = "Koin"
+            )
         )
     }
 
