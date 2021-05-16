@@ -2,7 +2,7 @@
 Koin Timber Logger  
 ===  
   
-![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg) ![Hosted on Jitpack.io](https://img.shields.io/badge/hosting-jitpack-blue.svg)  
+![Version 2.0.0](https://img.shields.io/badge/version-2.0.0-green.svg) ![Hosted on Jitpack.io](https://img.shields.io/badge/hosting-jitpack-blue.svg)
   
 _TL;DR A simple logger for [Koin](https://insert-koin.io/) that uses [Timber](https://github.com/JakeWharton/timber)_  
   
@@ -13,10 +13,10 @@ Use it as the optional `logger` parameter of `startKoin`
 For example  
   
 ```Kotlin  
-startKoin(  
+startKoin{
     ...  
-    logger = TimberLogger()  
-)  
+    TimberLogger()
+}
 ```  
   
 ### Options
@@ -61,7 +61,7 @@ The constructor has multiple arguments that you can use to customise the behavio
 For example, if you want to use the tag **Koin** and only display **error** messages, then  you can use
 
 ```
-logger = TimberLogger(  
+TimberLogger(
   showDebug = false,  
   showInfo = false,  
   tag = "Koin"  
@@ -89,7 +89,7 @@ In the *module* `build.gradle`
   
 ```gradle  
 dependencies {  
-    implementation 'com.github.quentin7b:koin-timber-logger:1.1.0'  
+    implementation 'com.github.quentin7b:koin-timber-logger:2.0.0'
 }  
 ```  
   
