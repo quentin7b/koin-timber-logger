@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatTextView
-import org.koin.android.ext.android.inject
+import io.insert-koin.android.ext.android.inject
 
 class ExampleActivity : AppCompatActivity() {
 
