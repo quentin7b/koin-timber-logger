@@ -1,8 +1,8 @@
 package com.github.quentin7b.kointimber
 
-import io.insert-koin.core.logger.Level
-import io.insert-koin.core.logger.Logger
-import io.insert-koin.core.logger.MESSAGE
+import org.koin.core.logger.Level
+import org.koin.core.logger.Logger
+import org.koin.core.logger.MESSAGE
 import timber.log.Timber
 
 /**

@@ -1,9 +1,10 @@
 package com.github.quentin7b.kointimber
 
 import android.app.Application
-import io.insert-koin.android.ext.koin.androidContext
-import io.insert-koin.core.context.startKoin
-import io.insert-koin.dsl.module
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.GlobalContext.startKoin
+import org.koin.dsl.module
+
 import timber.log.Timber
 
 class ExampleApp : Application() {
