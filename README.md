@@ -2,7 +2,7 @@
 Koin Timber Logger  
 ===  
   
-![Version 2.0.0](https://img.shields.io/badge/version-2.0.0-green.svg) ![Hosted on Jitpack.io](https://img.shields.io/badge/hosting-jitpack-blue.svg)
+![Version 3.0.0](https://img.shields.io/badge/version-3.0.0-green.svg) ![Hosted on Jitpack.io](https://img.shields.io/badge/hosting-jitpack-blue.svg)
   
 _TL;DR A simple logger for [Koin](https://insert-koin.io/) that uses [Timber](https://github.com/JakeWharton/timber)_  
   
@@ -89,7 +89,7 @@ In the *module* `build.gradle`
   
 ```gradle  
 dependencies {  
-    implementation 'com.github.quentin7b:koin-timber-logger:2.0.0'
+    implementation 'com.github.quentin7b:koin-timber-logger:3.0.0'
 }  
 ```  
   
