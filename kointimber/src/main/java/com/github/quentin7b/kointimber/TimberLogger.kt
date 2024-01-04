@@ -16,6 +16,7 @@ class TimberLogger(
     private val showDebug: Boolean = true,
     private val showInfo: Boolean = true,
     private val showErr: Boolean = true,
+    private val showWarning: Boolean = true,
     tag: String? = null
 ) : Logger() {
 
@@ -42,9 +43,16 @@ class TimberLogger(
         }
     }
 
-    override fun log(level: Level, msg: MESSAGE) {
+    private fun showWarning(msg: String) {
+        if (showWarning) {
+            tree.w(msg)
+        }
+    }
+
+    override fun display(level: Level, msg: MESSAGE) {
         when (level) {
             Level.INFO -> showInfo(msg)
+            Level.WARNING -> showWarning(msg)
             Level.DEBUG -> showDebug(msg)
             Level.ERROR -> showErr(msg)
             Level.NONE -> {
@@ -52,4 +60,5 @@ class TimberLogger(
             }
         }
     }
+
 }
